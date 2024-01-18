@@ -10,7 +10,7 @@ module.exports = {
         primary: ['Inter'],
       },
       animation: {
-        'text-slide': 'text-slide 5.5s cubic-bezier(0.93, 0, 0.17, 1) infinite',
+        'text-slide': 'text-slide 5.5s infinite',
       },
       keyframes: {
         'text-slide': {
