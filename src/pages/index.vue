@@ -1,337 +1,457 @@
+<script setup script>
+const builtForHeadingWords = ["Solopreneurs", "Enterprises", "Agencies", "Marketplaces"];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+
+function type() {
+  currentWord = builtForHeadingWords[i];
+  if (isDeleting) {
+    document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+    j--;
+    if (j == 0) {
+      isDeleting = false;
+      i++;
+      if (i == builtForHeadingWords.length) {
+        i = 0;
+      }
+    }
+  } else {
+    document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+    j++;
+    if (j == currentWord.length) {
+      isDeleting = true;
+    }
+  }
+  setTimeout(type, 300);
+}
+
+const perfectForHeadingWords = ref(["Researching", "Asset Managment", "Software Development", "Online Marketing"]);
+let currentIndex = ref(0);
+
+function startAnimation() {
+  setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % perfectForHeadingWords.value.length;
+  }, 500); // Adjust the interval as needed
+}
+
+onMounted(() => {
+  type();
+  startAnimation();
+});
+</script>
+
 <template>
-
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-xl">
-        <h1 data-aos="fade-down" class="text-4xl md:text-7xl font-bold mb-6">Nuxtwind Daisy</h1>
-        <p data-aos="fade-down" data-aos-delay="300" class="md:text-lg mb-6">Nuxtwind Daisy is a starter template project for Nuxt.js 3 + Tailwind CSS + Daisy UI with additional installed setup for custom font, icons, animation, and more.</p>
-        <div class="flex justify-center space-x-5">
-          <a
-            data-aos="fade-down"
-            data-aos-delay="600"
-            class="btn btn-sm md:btn-md btn-primary"
-            href="https://github.com/OSSPhilippines/nuxtwind-daisy/fork"
-            target="_blank"
+  <div class="bg-black/80 backdrop-blur-xl w-full min-h-screen text-gray-300 font-inter">
+    <section class="pt-24">
+      <div class="w-full px-6 py-32 sm:px-14 xl:px-40">
+        <div
+          class="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between"
+        >
+          <div
+            class="flex flex-col max-w-xl text-left sm:items-center sm:text-center lg:text-left lg:items-start"
           >
-            Fork this Project
-          </a>
-          <a
-            data-aos="fade-down"
-            data-aos-delay="600"
-            class="btn btn-sm md:btn-md btn-primary btn-outline"
-            href="https://github.com/OSSPhilippines/nuxtwind-daisy"
-            target="_blank"
-          >
-            Give us a star in GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Introduction</h1>
-      <p class="md:text-lg">Create beautiful and fast websites without worrying about the tedious setup. Just fork this repository and start hacking away!</p>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Getting Started</h1>
-      <p class="md:text-lg">Read <a href="https://github.com/OSSPhilippines/nuxtwind-daisy#readme" class="text-primary">the documentation</a> on how to start quickly.</p>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Features</h1>
-      <p class="md:text-lg">See what you can do below. Basically, every basic thing that you need is already included in this starter template project. From custom font, icons, animations, and more.</p>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col mb-5">
-      <h1 class="text-xl md:text-3xl mb-5">Icons by Line Awesome <i class="las la-icons text-primary"></i></h1>
-      <p class="md:text-lg">Get more icons from the <a class="text-primary" href="https://icons8.com/line-awesome" target="_blank">Line Awesome documentation</a>.</p>
-    </div>
-    <div class="flex space-x-5 overflow-scroll">
-      <i class="las la-cat text-4xl"></i>
-      <i class="las la-crow text-4xl"></i>
-      <i class="las la-dog text-4xl"></i>
-      <i class="las la-dove text-4xl"></i>
-      <i class="las la-horse text-4xl"></i>
-      <i class="las la-spider text-4xl"></i>
-      <i class="las la-kiwi-bird text-4xl"></i>
-      <i class="las la-beer text-4xl"></i>
-      <i class="las la-glass-whiskey text-4xl"></i>
-      <i class="las la-home text-4xl"></i>
-      <i class="las la-birthday-cake text-4xl"></i>
-      <a class="hidden md:inline text-lg mt-1 text-primary" href="https://icons8.com/line-awesome" target="_blank">and more...</a>
-    </div>
-    <a class="inline md:hidden text-lg mt-1 text-primary" href="https://icons8.com/line-awesome" target="_blank">and more...</a>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col mb-5">
-      <h1 class="text-xl md:text-3xl mb-5">Animation by AOS.js <i class="las la-running text-primary"></i></h1>
-      <p class="md:text-lg">Check <a class="text-primary" href="https://michalsnik.github.io/aos/" target="_blank">AOS.js documentation</a> for more animations.</p>
-    </div>
-    <div class="flex flex-col">
-      <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5">
-        <div data-aos="fade-down" data-aos-delay="500" class="w-full md:w-[200px] h-[200px] bg-green-200"></div>
-        <div data-aos="flip-left" data-aos-delay="1000" class="w-full md:w-[200px] h-[200px] bg-red-200"></div>
-        <div data-aos="zoom-in" data-aos-delay="1500" class="w-full md:w-[200px] h-[200px] bg-blue-200"></div>
-        <a class="text-lg mt-1 text-primary" href="https://michalsnik.github.io/aos/" target="_blank">more animations...</a>
-      </div>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col mb-5">
-      <h1 class="text-xl md:text-3xl mb-5">UI Components by Daisy UI 🌼 version 3</h1>
-      <p class="md:text-lg">Learn more from the official <a class="text-primary" href="https://daisyui.com/" target="_blank">daisyUI documentation</a>.</p>
-    </div>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Buttons</h1>
-      <div class="flex space-x-5 overflow-scroll">
-        <button class="btn">Button</button>
-        <button class="btn btn-primary">Button</button>
-        <button class="btn btn-secondary">Button</button>
-        <button class="btn btn-accent">Button</button>
-        <button class="btn btn-ghost">Button</button>
-        <button class="btn btn-link">Button</button>
-      </div>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Alerts</h1>
-      <div class="space-y-5">
-        <div class="alert shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>12 unread messages. Tap to see.</span>
-          </div>
-        </div>
-
-        <div class="alert alert-info shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>New software update available.</span>
-          </div>
-        </div>
-
-        <div class="alert alert-success shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span>Your purchase has been confirmed!</span>
-          </div>
-        </div>
-
-        <div class="alert alert-warning shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-            <span>Warning: Invalid email address!</span>
-          </div>
-        </div>
-
-        <div class="alert alert-error shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span>Error! Task failed successfully.</span>
-          </div>
-        </div>
-
-        <div class="alert shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>we use cookies for no reason.</span>
-          </div>
-          <div class="flex-none">
-            <button class="btn btn-sm btn-ghost">Deny</button>
-            <button class="btn btn-sm btn-primary">Accept</button>
-          </div>
-        </div>
-
-        <div class="alert shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <div>
-              <h3 class="font-bold">New message!</h3>
-              <div class="text-xs">You have 1 unread message</div>
+            <h1
+              class="text-5xl font-bold tracking-tight sm:text-6xl lg:max-w-lg md:text-7xl leading-tighter text-transparent font-rubik bg-clip-text bg-gradient-to-r from-secondary to-primary"
+              data-aos="fade-left"
+            >
+              Online Businesses on Autopilot
+            </h1>
+            <p
+              class="pr-12 text-base leading-relaxed text-gray-300 sm:pr-0 sm:text-lg lg:max-w-lg font-inter pt-7"
+              data-aos="fade-up"
+            >
+              Leveraging AI and Automation for bigger outcomes. Save time, money, and effort and redefine success.
+            </p>
+            <div
+              class="flex flex-col min-w-full pt-10 space-y-4 md:space-y-0 md:flex-row md:items-center md:space-x-4"
+              data-aos="fade-down"
+            >
+              <input
+                class="flex-1 px-6 py-4 font-normal tracking-wider placeholder-gray-300 bg-gray-900 md:w-64 rounded-xl"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                class="px-6 py-4 font-bold text-white bg-green rounded-xl whitespace-nowrap"
+              >
+                Get early access
+              </button>
+            </div>
+            <div class="pt-20">
+              <div
+                class="flex flex-col items-center space-y-2 text-gray-800 md:space-x-10 md:space-y-0 md:flex-row"
+                data-aos="fade-up"
+              >
+                <span class="text-sm">Integrations</span>
+                <div class="flex items-center justify-center space-x-6 md:space-x-10">
+                  <a href="#" class="hover:text-white">
+                    <svg class="w-10 h-10 fill-current" viewBox="0 0 32 32" fill="none">
+                      <path
+                        d="M16 13.146C14.427 13.146 13.146 14.427 13.146 16C13.146 17.573 14.427 18.854 16 18.854C17.573 18.854 18.854 17.573 18.854 16C18.854 14.427 17.573 13.146 16 13.146ZM8.01 21.672L7.38 21.516C2.692 20.328 0 18.318 0 15.995C0 13.672 2.693 11.662 7.38 10.474L8.01 10.318L8.187 10.943C8.66257 12.58 9.27058 14.1756 10.005 15.714L10.14 15.995L10.005 16.281C9.26904 17.8187 8.66099 19.4145 8.187 21.052L8.01 21.672ZM7.089 11.932C3.526 12.932 1.339 14.468 1.339 15.995C1.339 17.522 3.527 19.052 7.089 20.058C7.52565 18.6706 8.05278 17.3134 8.667 15.995C8.05192 14.677 7.52477 13.3197 7.089 11.932V11.932ZM23.99 21.672L23.813 21.047C23.3383 19.4113 22.7302 17.8173 21.995 16.281L21.86 15.995L21.995 15.709C22.731 14.1713 23.339 12.5756 23.813 10.938L23.99 10.318L24.62 10.474C29.308 11.662 32 13.672 32 15.995C32 18.318 29.307 20.328 24.62 21.516L23.99 21.672ZM23.333 15.995C23.9493 17.3125 24.4764 18.6699 24.911 20.058C28.479 19.053 30.661 17.522 30.661 15.995C30.661 14.468 28.473 12.938 24.911 11.932C24.4733 13.319 23.9462 14.6762 23.333 15.995ZM7.078 11.927L6.901 11.302C5.583 6.656 5.984 3.323 8 2.161C9.979 1.02 13.151 2.369 16.479 5.786L16.932 6.25L16.479 6.714C15.2972 7.94363 14.2173 9.26732 13.25 10.672L13.068 10.927L12.755 10.953C11.0535 11.0873 9.36563 11.3592 7.708 11.766L7.078 11.927ZM9.609 3.089C9.25 3.089 8.932 3.162 8.666 3.318C7.343 4.084 7.109 6.74 8.02 10.323C9.44145 10.005 10.8822 9.78056 12.333 9.651C13.1683 8.46139 14.0816 7.32856 15.067 6.26C12.989 4.234 11.02 3.088 9.609 3.088V3.089ZM22.396 30.234C22.391 30.234 22.391 30.234 22.396 30.234C20.495 30.234 18.052 28.807 15.521 26.203L15.068 25.739L15.521 25.275C16.7028 24.0454 17.7827 22.7217 18.75 21.317L18.927 21.062L19.24 21.031C20.9437 20.9012 22.6336 20.6293 24.292 20.218L24.922 20.062L25.099 20.687C26.417 25.333 26.016 28.661 24 29.822C23.5126 30.1021 22.9581 30.2442 22.396 30.233V30.234ZM16.932 25.729C19.01 27.755 20.979 28.901 22.39 28.901H22.395C22.749 28.901 23.067 28.823 23.333 28.672C24.656 27.906 24.896 25.25 23.979 21.667C22.5578 21.9853 21.1169 22.2081 19.666 22.334C18.8308 23.5252 17.9174 24.6597 16.932 25.73V25.729ZM24.922 11.927L24.292 11.766C22.6324 11.3606 20.943 11.0887 19.24 10.953L18.927 10.927L18.75 10.672C17.7827 9.26732 16.7028 7.94363 15.521 6.714L15.068 6.25L15.521 5.786C18.849 2.369 22.021 1.02 24 2.161C26.016 3.322 26.417 6.656 25.099 11.302L24.922 11.927ZM19.667 9.651C21.1178 9.78021 22.5586 10.0047 23.98 10.323C24.897 6.74 24.657 4.083 23.334 3.318C22.016 2.558 19.537 3.724 16.933 6.261C17.9157 7.33186 18.8289 8.46451 19.667 9.652V9.651ZM9.609 30.234C9.046 30.244 8.489 30.104 8 29.823C5.984 28.662 5.583 25.333 6.901 20.688L7.078 20.063L7.708 20.219C9.25 20.61 10.948 20.88 12.755 21.032L13.068 21.063L13.245 21.318C14.2123 22.7227 15.2922 24.0464 16.474 25.276L16.927 25.74L16.474 26.204C13.948 28.808 11.505 30.235 9.609 30.235V30.234ZM8.021 21.667C7.104 25.25 7.344 27.907 8.667 28.672C9.985 29.422 12.459 28.266 15.068 25.729C14.0826 24.6587 13.1692 23.5242 12.334 22.333C10.883 22.2075 9.44211 21.9847 8.021 21.666V21.667ZM16 22.505C14.901 22.505 13.776 22.458 12.646 22.364L12.333 22.338L12.151 22.078C11.5127 21.1609 10.9132 20.2174 10.354 19.25C9.79365 18.2826 9.27419 17.292 8.797 16.281L8.662 15.995L8.797 15.709C9.75303 13.6874 10.8749 11.7484 12.151 9.912L12.333 9.652L12.646 9.626C14.878 9.43801 17.122 9.43801 19.354 9.626L19.667 9.652L19.849 9.912C21.1268 11.7474 22.2487 13.6865 23.203 15.709L23.338 15.995L23.203 16.281C22.2506 18.3045 21.1286 20.2438 19.849 22.078L19.667 22.338L19.354 22.364C18.2384 22.4574 17.1195 22.5044 16 22.505V22.505ZM13.073 21.057C15.042 21.208 16.958 21.208 18.932 21.057C20.0329 19.4449 21.0113 17.7525 21.859 15.994C21.0149 14.2326 20.0346 12.5398 18.927 10.931C16.9786 10.78 15.0214 10.78 13.073 10.931C11.9646 12.5393 10.9843 14.2322 10.141 15.994C10.9889 17.7534 11.9691 19.4459 13.073 21.057V21.057Z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="hover:text-white">
+                    <svg class="w-10 h-10 fill-current" viewBox="0 0 32 32" fill="none">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M18.7339 3.667L25.3119 7.469C25.618 7.14731 25.9948 6.90124 26.4124 6.75024C26.83 6.59923 27.277 6.54744 27.718 6.59895C28.1591 6.65045 28.5821 6.80385 28.9537 7.04701C29.3253 7.29017 29.6352 7.61643 29.8589 8C30.0801 8.385 30.2085 8.81621 30.234 9.25946C30.2595 9.70271 30.1815 10.1458 30.0061 10.5537C29.8306 10.9615 29.5626 11.3229 29.2232 11.6092C28.8839 11.8955 28.4825 12.0988 28.0509 12.203V19.802C28.4833 19.904 28.8856 20.106 29.2258 20.3917C29.566 20.6774 29.8344 21.0388 30.0096 21.447C30.1849 21.8552 30.262 22.2987 30.2347 22.7421C30.2075 23.1855 30.0768 23.6163 29.8529 24C29.6266 24.3907 29.311 24.7223 28.9319 24.9675C28.5528 25.2127 28.1209 25.3647 27.6718 25.411C27.2227 25.4572 26.7689 25.3964 26.3478 25.2335C25.9267 25.0707 25.5501 24.8104 25.2489 24.474L18.7069 28.25C18.8487 28.6787 18.8867 29.135 18.8178 29.5813C18.749 30.0276 18.5752 30.4512 18.3107 30.8173C18.0463 31.1833 17.6987 31.4814 17.2967 31.687C16.8946 31.8926 16.4495 31.9999 15.9979 32C15.5541 32.0003 15.1163 31.897 14.7194 31.6982C14.3226 31.4994 13.9776 31.2107 13.7121 30.855C13.4465 30.4993 13.2677 30.0866 13.1899 29.6496C13.1121 29.2126 13.1375 28.7635 13.2639 28.338L6.68094 24.541C6.42242 24.8127 6.11282 25.0308 5.76988 25.1826C5.42694 25.3344 5.0574 25.4171 4.68245 25.4258C4.3075 25.4345 3.93451 25.3692 3.58487 25.2335C3.23523 25.0978 2.91582 24.8944 2.64494 24.635C2.27592 24.2802 2.00893 23.8328 1.87186 23.3396C1.73479 22.8464 1.73266 22.3254 1.86569 21.8311C1.99872 21.3368 2.26204 20.8872 2.62814 20.5294C2.99424 20.1716 3.44969 19.9187 3.94694 19.797V12.198C3.54836 12.1031 3.1749 11.9235 2.85198 11.6713C2.52907 11.4191 2.26428 11.1003 2.07564 10.7366C1.887 10.3729 1.77894 9.97284 1.75881 9.56362C1.73869 9.1544 1.80697 8.74565 1.95901 8.36519C2.11105 7.98472 2.34328 7.64149 2.63989 7.35884C2.93649 7.07619 3.29052 6.86077 3.67787 6.72724C4.06521 6.59371 4.47678 6.5452 4.88456 6.58502C5.29233 6.62484 5.68674 6.75205 6.04094 6.958C6.27494 7.093 6.49394 7.26 6.68194 7.458L13.2649 3.661C13.0502 2.93643 13.1321 2.15625 13.4925 1.49203C13.853 0.827807 14.4624 0.333928 15.1869 0.118998C15.6796 -0.0282994 16.2029 -0.0395825 16.7014 0.0863446C17.1999 0.212272 17.6551 0.470718 18.0186 0.834296C18.3822 1.19787 18.6407 1.65304 18.7666 2.15156C18.8925 2.65007 18.8812 3.17337 18.7339 3.666V3.667ZM18.0469 4.839C18.0209 4.865 17.9999 4.891 17.9689 4.917L26.5839 19.834C26.6199 19.824 26.6619 19.813 26.6929 19.803V12.194C26.3301 12.1043 25.9885 11.9438 25.6878 11.7218C25.3871 11.4999 25.1332 11.2207 24.9406 10.9004C24.748 10.58 24.6206 10.2248 24.5655 9.85514C24.5105 9.48545 24.529 9.10853 24.6199 8.746C24.6249 8.715 24.6359 8.678 24.6409 8.647L18.0469 4.839ZM14.0259 4.917L13.9479 4.839L7.35394 8.641C7.56276 9.36689 7.47489 10.146 7.10963 10.8071C6.74437 11.4683 6.1316 11.9574 5.40594 12.167L5.30194 12.193V19.802L5.41693 19.833L14.0319 4.916L14.0259 4.917ZM16.7969 5.594C16.2773 5.74 15.7275 5.74 15.2079 5.594L6.59294 20.511C6.98394 20.886 7.25994 21.37 7.39494 21.902H24.6089C24.7389 21.371 25.0149 20.886 25.4109 20.506L16.7969 5.594ZM18.1089 27.229L24.6609 23.443C24.6399 23.38 24.6249 23.318 24.6089 23.255H7.38994L7.35894 23.364L13.9479 27.166C14.2136 26.8901 14.5324 26.6708 14.885 26.5213C15.2377 26.3718 15.6169 26.2951 15.9999 26.296C16.8389 26.296 17.5889 26.655 18.1089 27.228V27.229Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                  <a href="#" class="hover:text-white">
+                    <svg class="w-10 h-10 fill-current" viewBox="0 0 32 32" fill="none">
+                      <path
+                        d="M24.306 4.019H19.5L16 9.556L13 4.019H2L16 28L30 4.019H24.306ZM5.481 6.019H8.844L16 18.406L23.15 6.019H26.513L16.001 24.031L5.481 6.019Z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="hover:text-white">
+                    <svg class="w-16 h-16 fill-current" viewBox="0 0 32 32" fill="none">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M8.24988 10.435L6.08488 10.895L6.07488 18.015C6.07488 19.33 7.06488 20.18 8.37988 20.18C9.10988 20.18 9.64488 20.045 9.93988 19.885V18.195C9.65488 18.31 8.25488 18.72 8.25488 17.41V14.25H9.93988V12.36H8.25488L8.24988 10.435ZM12.7049 13.015L12.5699 12.36H10.6499V20.02H12.8649V14.865C13.3899 14.175 14.2749 14.31 14.5599 14.4V12.36C14.2599 12.255 13.2249 12.06 12.7049 13.015V13.015ZM17.3199 9.4L15.0899 9.875V11.685L17.3199 11.21V9.4ZM2.24488 14.615C2.24488 14.27 2.53488 14.135 2.99988 14.13C3.67488 14.13 4.53488 14.335 5.20988 14.7V12.61C4.50735 12.3359 3.75896 12.1984 3.00488 12.205C1.20488 12.205 0.00488281 13.145 0.00488281 14.715C0.00488281 17.175 3.37988 16.775 3.37988 17.835C3.37988 18.245 3.02488 18.38 2.52988 18.38C1.79488 18.38 0.844883 18.075 0.0998828 17.67V19.67C0.924883 20.025 1.75988 20.175 2.52488 20.175C4.36988 20.175 5.63988 19.385 5.63988 17.785C5.63988 15.14 2.24488 15.615 2.24488 14.615V14.615ZM31.9999 16.28C31.9999 14.005 30.8999 12.21 28.7899 12.21C26.6799 12.21 25.3949 14.005 25.3949 16.265C25.3949 18.94 26.9099 20.175 29.0699 20.175C30.1299 20.175 30.9249 19.935 31.5299 19.6V17.93C30.9249 18.235 30.2299 18.42 29.3499 18.42C28.4849 18.42 27.7249 18.115 27.6249 17.075H31.9699C31.9799 16.96 31.9999 16.495 31.9999 16.28V16.28ZM27.6049 15.44C27.6049 14.44 28.2199 14.02 28.7749 14.02C29.3199 14.02 29.8999 14.44 29.8999 15.44H27.6049ZM21.9599 12.21C21.0899 12.21 20.5299 12.62 20.2199 12.905L20.1049 12.355H18.1499V22.595L20.3699 22.125L20.3749 19.615C20.6949 19.85 21.1699 20.175 21.9449 20.175C23.5349 20.175 24.9849 19.015 24.9849 16.195C24.9899 13.615 23.5199 12.21 21.9599 12.21V12.21ZM21.4299 18.335C20.9099 18.335 20.5999 18.145 20.3849 17.915L20.3699 14.615C20.5999 14.36 20.9199 14.175 21.4299 14.175C22.2399 14.175 22.7999 15.085 22.7999 16.245C22.8049 17.44 22.2549 18.335 21.4299 18.335V18.335ZM15.0949 20.02H17.3249V12.36H15.0949V20.02Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex-none">
-            <button class="btn btn-sm">See</button>
+          <div
+            class="hidden w-full pt-10 md:justify-center md:flex lg:block lg:pl-20 lg:pt-0"
+            data-aos="fade-right"
+          >
+            <div class="mockup-browser bg-base-300">
+              <div class="mockup-browser-toolbar">
+                <div class="input">https://autonomous.enterprises/</div>
+              </div>
+              <div class="flex justify-center bg-base-200">
+                <img src="~/assets/images/screenshot.jpg" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </generic-panel>
+    </section>
 
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Badges</h1>
-      <div class="flex space-x-5 overflow-scroll">
-        <div class="badge badge-info gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          info
-        </div>
-        <div class="badge badge-success gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          success
-        </div>
-        <div class="badge badge-warning gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          warning
-        </div>
-        <div class="badge badge-error gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          error
-        </div>
+    <section class="px-6 py-24 sm:px-14 lg:px-24 xl:px-54">
+      <div class="flex items-center justify-center">
+        <h2
+          class="w-full text-4xl font-bold tracking-tight text-center text-white sm:text-5xl md:text-6xl leading-tighter font-rubik"
+          data-aos="fade-up"
+        >
+          Built for <span id="typewriter"></span>
+        </h2>
       </div>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Chat Bubbles</h1>
-      <div class="flex flex-col">
-        <div class="chat chat-start">
-          <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
+      <div class="flex flex-col pt-24 md:flex-row md:justify-between">
+        <div class="flex flex-col w-full md:w-1/2" data-aos="fade-up">
+          <div class="flex items-center">
+            <img
+              class="rounded-full w-18 h-18"
+              src="~/assets/images/founder.jpg"
+              alt=""
+            />
+            <div class="pt-1 pl-8">
+              <div
+                class="flex flex-wrap items-baseline text-base text-gray-200 sm:text-lg"
+              >
+                <a class="whitespace-nowrap" href="#"> Christopher Müller </a>
+                <span class="px-2"> / </span>
+                <span class="font-light text-gray-700 whitespace-nowrap">
+                  Founder
+                </span>
+              </div>
+              <div class="flex items-center pt-2 text-gray-300">
+                <svg
+                  class="w-6 h-6 fill-current sm:w-8 sm:h-8"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M5.18788 20.896L8.33887 0.615C8.44287 -0.0730001 9.36987 -0.229 9.69287 0.386L13.0839 6.745L5.18788 20.896ZM27.5779 25.818L24.5779 7.151C24.5551 7.02056 24.4971 6.89884 24.4101 6.79905C24.3231 6.69925 24.2104 6.62519 24.0843 6.5849C23.9581 6.54461 23.8234 6.53963 23.6946 6.57049C23.5659 6.60136 23.448 6.6669 23.3539 6.76L4.42188 25.817L14.8959 31.723C15.5519 32.093 16.3539 32.093 17.0109 31.723L27.5779 25.818ZM19.0679 9.531L16.6409 4.885C16.5794 4.76838 16.4873 4.67075 16.3744 4.60264C16.2615 4.53454 16.1322 4.49854 16.0004 4.49854C15.8685 4.49854 15.7392 4.53454 15.6263 4.60264C15.5135 4.67075 15.4213 4.76838 15.3599 4.885L4.70888 23.979L19.0679 9.531Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="32" height="32" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="pl-1 text-xl">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="relative max-w-sm pt-10 text-base leading-relaxed text-gray-200 border-b border-gray-900 sm:text-lg pb-14 before:absolute before:bottom-0 before:-mb-px before:w-16 before:border-b-2 before:border-gray-100"
+          >
+            "As the founder, my dream has always been about automated online businesses. The new AI era aligns perfectly, reclaiming time effortlessly. I'm excited!"
+          </p>
         </div>
-        <div class="chat chat-start">
-          <div class="chat-bubble chat-bubble-secondary">Put me on the Council and not make me a Master!??</div>
-        </div>
-        <div class="chat chat-start">
-          <div class="chat-bubble chat-bubble-accent">That's never been done in the history of the Jedi. It's insulting!</div>
-        </div>
-        <div class="chat chat-end">
-          <div class="chat-bubble chat-bubble-info">Calm down, Anakin.</div>
-        </div>
-        <div class="chat chat-end">
-          <div class="chat-bubble chat-bubble-success">You have been given a great honor.</div>
-        </div>
-        <div class="chat chat-end">
-          <div class="chat-bubble chat-bubble-warning">To be on the Council at your age.</div>
-        </div>
-        <div class="chat chat-end">
-          <div class="chat-bubble chat-bubble-error">It's never happened before.</div>
-        </div>
-      </div>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Checkboxes</h1>
-      <div class="flex flex-col">
-        <div class="form-control w-52">
-          <label class="cursor-pointer label">
-            <span class="label-text">Remember me</span>
-            <input type="checkbox" class="toggle toggle-primary" checked />
-          </label>
-        </div>
-        <div class="form-control w-52">
-          <label class="cursor-pointer label">
-            <span class="label-text">Remember me</span>
-            <input type="checkbox" class="toggle toggle-secondary" checked />
-          </label>
-        </div>
-        <div class="form-control w-52">
-          <label class="cursor-pointer label">
-            <span class="label-text">Remember me</span>
-            <input type="checkbox" class="toggle toggle-accent" checked />
-          </label>
-        </div>
-      </div>
-    </div>
-  </generic-panel>
-
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">Footers</h1>
-      <footer class="footer p-10 bg-base-200 text-base-content">
-        <div>
-          <span class="footer-title">Services</span>
-          <a class="link link-hover">Branding</a>
-          <a class="link link-hover">Design</a>
-          <a class="link link-hover">Marketing</a>
-          <a class="link link-hover">Advertisement</a>
-        </div>
-        <div>
-          <span class="footer-title">Company</span>
-          <a class="link link-hover">About us</a>
-          <a class="link link-hover">Contact</a>
-          <a class="link link-hover">Jobs</a>
-          <a class="link link-hover">Press kit</a>
-        </div>
-        <div>
-          <span class="footer-title">Legal</span>
-          <a class="link link-hover">Terms of use</a>
-          <a class="link link-hover">Privacy policy</a>
-          <a class="link link-hover">Cookie policy</a>
-        </div>
-      </footer>
-      <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
-        <div class="items-center grid-flow-col">
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
-          <p>ACME Industries Ltd. <br/>Providing reliable tech since 1992</p>
-        </div>
-        <div class="md:place-self-center md:justify-self-end">
-          <div class="grid grid-flow-col gap-4">
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+        <div class="w-full pt-10 md:w-1/2 md:pt-0" data-aos="zoom-in">
+          <div class="mockup-browser bg-base-300">
+            <div class="mockup-browser-toolbar">
+              <div class="input">https://autonomous.enterprises/</div>
+            </div>
+            <div class="flex justify-center bg-base-200">
+              <img src="~/assets/images/screen_1.png" alt="" />
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
-  </generic-panel>
+      </div>
 
-  <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="md:text-xl mb-5 font-bold">And more components...</h1>
-      <p>Visit the official <a href="https://daisyui.com/docs/install/" target="_blank" class="text-primary">Daisy UI documentation</a>.</p>
-    </div>
-  </generic-panel>
+      <div class="flex flex-col items-center pt-12 sm:items-start sm:flex-row md:pt-18">
+        <div
+          class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
+          data-aos="fade-down" data-aos-delay="100"
+        >
+          <img src="./assets/img/api.svg" alt="" />
+          <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
+            Faster than API
+          </h3>
+          <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-700 md:pr-16">
+            Changes are publish to all clients in real time. Local data is fast, read and
+            write it instantly. Cache it forever
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
+          data-aos="fade-down" data-aos-delay="200"
+        >
+          <img src="./assets/img/cloud.svg" alt="" />
+          <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
+            Easy to use
+          </h3>
+          <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-700 md:pr-16">
+            Develop with local database that's as capable as cloud DBs. Cut out your API
+            and let Homebase sync state and help you manage data flow.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
+          data-aos="fade-down" data-aos-delay="300"
+        >
+          <img src="./assets/img/database.svg" alt="" />
+          <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
+            More collaborative
+          </h3>
+          <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-700 md:pr-16">
+            When database is responsible for resolving conflicts you don't have to solve
+            realtime collaboration or offline support.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <section class="px-6 py-32 sm:px-14 lg:px-24 xl:px-54">
+      <div class="flex items-center justify-center">
+
+        <div class="font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200" data-aos="fade-up">
+          <h2
+            class="text-4xl font-bold tracking-tight text-center text-white sm:text-5xl md:text-6xl leading-tighter font-rubik p-auto"
+          >
+            Perfect for
+            <span class="inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+              <ul class="animate-text-slide text-transparent font-rubik bg-clip-text bg-gradient-to-r from-secondary to-primary">
+                <li v-for="word in perfectForHeadingWords" :key="word">{{ word }}</li>
+              </ul>
+            </span>
+          </h2>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col w-full pt-24 pr-12 space-y-4 md:pr-16 md:w-1/3">
+          <div
+            class="relative pt-4 border-b border-gray-900 pb-7 before:absolute before:border-b before:border-gray-100 before:bottom-0 before:w-3/4 before:-mb-px"
+            data-aos="fade-down" data-aos-delay="100"
+          >
+            <h3 class="text-xl font-bold text-white font-rubik">
+              Reactively query relational data locally
+            </h3>
+            <p class="pt-4 text-sm leading-relaxed text-gray-700">
+              Don't wait on the network. We'll cache everything and automatically
+              subscribe clients to changes.
+            </p>
+          </div>
+          <div class="pt-4 border-b border-gray-900 pb-7" data-aos="fade-down" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-white font-rubik">
+              Save instantly to a local DB
+            </h3>
+            <p class="pt-4 text-sm leading-relaxed text-gray-700">
+              Make your app feel native. Make it faster and work offline. Our consistency
+              mechanisms make offline transactions as easy as transacting to a central
+              cloud database.
+            </p>
+          </div>
+          <div class="pt-4 border-b border-gray-900 pb-7" data-aos="fade-down" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-white font-rubik">
+              Sync data across devices and between users
+            </h3>
+            <p class="pt-4 text-sm leading-relaxed text-gray-700">
+              Homebase keeps your local and cloud data in snc. No API needed.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start w-full pt-12 md:pt-24 md:w-2/3">
+          <!-- <div
+            class="flex items-center w-full pt-4 space-x-6 border-b border-gray-900 md:px-12"
+          >
+            <div class="pb-4 border-b border-gray-100">
+              <button class="text-yellow">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                  <path
+                    d="M4 2C2.89543 2 2 2.89543 2 4V28C2 29.1046 2.89543 30 4 30H28C29.1046 30 30 29.1046 30 28V4C30 2.89543 29.1046 2 28 2H4ZM17.238 23.837C17.238 26.562 15.638 27.806 13.307 27.806C11.201 27.806 9.982 26.719 9.357 25.4L11.501 24.106C11.914 24.837 12.289 25.456 13.195 25.456C14.057 25.456 14.607 25.118 14.607 23.8V14.856H17.238V23.837ZM23.462 27.806C21.018 27.806 19.437 26.644 18.668 25.118L20.812 23.881C21.375 24.8 22.112 25.481 23.406 25.481C24.493 25.481 25.194 24.937 25.194 24.181C25.194 23.281 24.481 22.962 23.275 22.431L22.619 22.15C20.719 21.344 19.463 20.325 19.463 18.181C19.463 16.206 20.969 14.706 23.313 14.706C24.988 14.706 26.188 15.287 27.051 16.812L25.001 18.125C24.551 17.319 24.063 17 23.307 17C22.539 17 22.051 17.488 22.051 18.125C22.051 18.913 22.539 19.231 23.67 19.725L24.326 20.006C26.564 20.962 27.82 21.944 27.82 24.143C27.82 26.506 25.957 27.805 23.463 27.805L23.462 27.806Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="pb-4 hover:border-b hover:border-gray-100">
+              <button class="text-gray-800 hover:text-white">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M19.079 0.239953L20.282 0.504953L21.255 0.853953L22.042 1.25395L22.641 1.68195L23.094 2.13495L23.427 2.58695L23.64 3.02595L23.771 3.42595L23.828 3.76995L23.855 4.04095L23.839 4.21295V11.333L23.771 12.172L23.599 12.907L23.318 13.522L22.974 14.027L22.574 14.438L22.137 14.771L21.668 15.027L21.199 15.214L20.762 15.35L20.362 15.438L20.018 15.495L19.737 15.522H11.773L10.857 15.589L10.07 15.772L9.40301 16.069L8.85601 16.428L8.41301 16.856L8.05301 17.319L7.78801 17.804L7.58901 18.293L7.45401 18.761L7.36101 19.189L7.30801 19.548L7.28301 19.829V23.908H4.30801L4.02801 23.865L3.65201 23.772L3.23101 23.616L2.76201 23.376L2.28301 23.028L1.80401 22.548L1.33501 21.933L0.908007 21.146L0.532007 20.173L0.256007 19.001L0.0690071 17.6L0.00100708 15.96L0.0800071 14.335L0.293007 12.95L0.616007 11.789L1.04301 10.841L1.52301 10.081L2.05401 9.49695L2.61701 9.05395L3.17401 8.73695L3.71001 8.52395L4.19001 8.38795L4.61701 8.31995L4.93401 8.30895H5.14701L5.23101 8.31995H16.106V7.21595H8.31901L8.30801 3.54895L8.28301 3.05395L8.35101 2.60095L8.49601 2.18995L8.72001 1.81395L9.05301 1.47095L9.47001 1.16295L9.97401 0.897953L10.563 0.652953L11.24 0.455953L12.016 0.294953L12.864 0.163953L13.812 0.0809531L14.839 0.0289531L15.959 0.00195312L17.651 0.0699531L19.079 0.239953ZM10.683 2.87995L10.375 3.31695L10.266 3.86395L10.375 4.41195L10.683 4.86395L11.12 5.16095L11.667 5.28095L12.214 5.16095L12.651 4.86395L12.959 4.41195L13.068 3.86395L12.959 3.31695L12.651 2.87995L12.214 2.58795L11.667 2.46895L11.12 2.58795L10.683 2.87995ZM28.136 8.14495L28.505 8.22895L28.932 8.38495L29.401 8.62495L29.88 8.98395L30.36 9.45295L30.828 10.078L31.255 10.863L31.626 11.838L31.907 13.015L32.094 14.4L32.162 16.04L32.079 17.681L31.864 19.066L31.547 20.211L31.12 21.159L30.64 21.919L30.104 22.519L29.547 22.956L28.984 23.279L28.453 23.492L27.973 23.612L27.546 23.68L27.229 23.705L27.016 23.69H16.052V24.783H23.839L23.855 28.466L23.88 28.945L23.812 29.398L23.667 29.809L23.438 30.194L23.105 30.527L22.694 30.851L22.189 31.116L21.6 31.345L20.923 31.542L20.147 31.714L19.294 31.834L18.351 31.927L17.319 31.979L16.199 31.995L14.507 31.943L13.08 31.755L11.881 31.49L10.908 31.157L10.121 30.756L9.52201 30.313L9.06901 29.86L8.73601 29.408L8.52301 28.969L8.38701 28.569L8.33501 28.236L8.30801 27.969L8.31901 27.798V20.678L8.38701 19.823L8.56401 19.099L8.84001 18.49L9.18901 17.979L9.58901 17.558L10.028 17.235L10.496 16.968L10.96 16.781L11.403 16.645L11.804 16.568L12.147 16.516L12.6 16.473H20.387L21.308 16.406L22.095 16.223L22.762 15.942L23.309 15.567L23.748 15.139L24.107 14.676L24.378 14.191L24.577 13.712L24.712 13.248L24.807 12.821L24.859 12.446L24.884 12.165V8.08595H27.671L27.859 8.09695L28.136 8.14495ZM19.505 27.145L19.197 27.588L19.093 28.136L19.197 28.683L19.505 29.12L19.948 29.427L20.495 29.531L21.042 29.427L21.479 29.12L21.787 28.683L21.896 28.136L21.787 27.588L21.479 27.145L21.042 26.838L20.495 26.734L19.948 26.838L19.505 27.145Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="32" height="32" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+            <div class="pb-4 hover:border-b hover:border-gray-100">
+              <button class="text-gray-800 hover:text-white">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                  <path
+                    d="M9.349 13.609H8.088L7.401 17.14H8.521C9.26 17.14 9.812 17 10.177 16.719C10.536 16.443 10.781 15.974 10.906 15.323C11.03 14.698 10.973 14.255 10.745 13.995C10.51 13.74 10.046 13.61 9.349 13.61V13.609ZM16 7.58398C7.161 7.58398 0 11.355 0 16C0 20.645 7.161 24.416 16 24.416C24.839 24.416 32 20.645 32 16C32 11.355 24.839 7.58398 16 7.58398ZM11.651 17.521C11.3048 17.8537 10.8882 18.1042 10.432 18.254C9.984 18.395 9.412 18.473 8.719 18.473H7.14L6.708 20.713H4.869L6.51 12.281H10.041C11.104 12.281 11.88 12.557 12.369 13.114C12.854 13.671 13.005 14.453 12.806 15.453C12.7315 15.849 12.5948 16.2307 12.401 16.584C12.2015 16.9339 11.9481 17.2501 11.65 17.521H11.651ZM17.021 18.473L17.745 14.74C17.828 14.317 17.797 14.027 17.65 13.869C17.51 13.718 17.202 13.64 16.734 13.64H15.281L14.344 18.473H12.516L14.156 10.036H15.979L15.542 12.281H17.167C18.194 12.281 18.896 12.458 19.282 12.812C19.673 13.172 19.787 13.749 19.637 14.547L18.87 18.474L17.021 18.473ZM27.145 15.453C27.0728 15.8496 26.936 16.2317 26.74 16.584C26.5424 16.9335 26.291 17.2497 25.995 17.521C25.6457 17.8521 25.2278 18.1024 24.771 18.254C24.323 18.395 23.75 18.473 23.058 18.473H21.485L21.048 20.713H19.209L20.85 12.281H24.381C25.444 12.281 26.22 12.557 26.709 13.12C27.194 13.672 27.345 14.453 27.146 15.453H27.145ZM23.688 13.609H22.432L21.745 17.14H22.86C23.604 17.14 24.156 17 24.516 16.719C24.88 16.443 25.125 15.974 25.251 15.323C25.375 14.698 25.318 14.255 25.083 13.995C24.855 13.74 24.386 13.61 23.688 13.61V13.609Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="pb-4 hover:border-b hover:border-gray-100">
+              <button class="text-gray-800 hover:text-white">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                  <path d="M10.8688 10.3974L16.8928 4.375L19.568 10.3974H10.8688Z" />
+                  <path d="M26.8687 4L21.0575 9.8112L18.4751 4H26.8687V4Z" />
+                  <path d="M4.37766 16.8912L10.4001 19.5664V10.8672L4.37766 16.8912Z" />
+                  <path d="M9.8112 21.0551L4 18.4727V26.8663L9.8112 21.0551V21.0551Z" />
+                  <path d="M12 18.8668L18.8688 11.998H12V18.8668Z" />
+                  <path d="M28 25.9693L21.7488 11.3821L28 5.13086V25.9693Z" />
+                  <path
+                    d="M26.4769 26.4768L20.5297 12.6016L12.6017 20.5296L26.4769 26.4768Z"
+                  />
+                  <path d="M11.3824 21.748L25.9696 27.9993H5.13123L11.3824 21.748Z" />
+                </svg>
+              </button>
+            </div>
+          </div> -->
+          <div class="flex flex-col w-full pt-10">
+            <div class="mockup-browser bg-base-300" data-aos="zoom-in">
+              <div class="mockup-browser-toolbar">
+                <div class="input">https://autonomous.enterprises/</div>
+              </div>
+              <div class="flex justify-center bg-base-200">
+                <img src="~/assets/images/screen_2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="pt-12">
+      <div class="flex">
+        <div
+          class="w-full px-6 py-20 sm:px-14 md:px-24 md:w-1/2 lg:w-2/5 xl:w-1/3 bg-editor-900"
+          >
+          <img src="~/assets/logo.png" alt="">
+          <div class="pt-14">
+            <h2
+            class="max-w-xs text-5xl font-bold tracking-tight text-transparent leading-tighter font-rubik bg-clip-text bg-gradient-to-r from-secondary to-primary"
+            >
+            Get early access
+          </h2>
+          <p class="max-w-lg text-xl leading-relaxed text-gray-300 pt-7">
+            Seamless way to work together
+          </p>
+          <div class="pt-14">
+              <!-- <div class="flex flex-col space-y-1">
+                <label class="text-sm text-gray-800">Username</label>
+                <input
+                  type="text"
+                  class="w-full px-6 py-4 text-sm font-normal tracking-wider placeholder-gray-300 bg-gray-900 rounded-xl"
+                  placeholder="Chriss Smothers"
+                />
+              </div> -->
+            <div class="flex flex-col pt-6 space-y-1">
+              <!-- <label class="text-sm text-gray-800">Email</label> -->
+              <input
+                type="text"
+                class="w-full px-6 py-4 text-sm font-normal tracking-wider placeholder-gray-300 bg-gray-900 rounded-xl"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="pt-10">
+              <button class="w-full px-6 py-4 font-bold text-white bg-green rounded-xl">
+                Get early access
+              </button>
+            </div>
+            <div class="pt-24">
+              <p class="text-sm leading-relaxed text-gray-700 pr-14">
+                We don't sell your data to third-parties.
+                <!-- <a href="#" class="text-white border-b border-white">Terms of Service</a>
+                and
+                <a href="#" class="text-white border-b border-white">Privacy Statement</a
+                  >. We'll occasionally send you account related emails. -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:w-1/2 md:px-12 md:py-20 md:block lg:w-3/5 xl:w-2/3">
+          <div class="mockup-browser bg-base-300" data-aos="zoom-in">
+            <div class="mockup-browser-toolbar">
+              <div class="input">https://autonomous.enterprises/</div>
+            </div>
+            <div class="flex justify-center bg-base-200">
+              <img src="~/assets/images/screen_5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
-<script>
-import { useHead } from '#app';
-import { definePageMeta } from '#imports';
-import GenericPanel from '~/components/commons/GenericPanel';
-import ogBanner from '../assets/images/nuxtwind-daisy-og-banner.jpg';
+<style>
+.animate-text-slide {
+  animation: textSlide 12.5s infinite;
+}
 
-export default {
-  components: {
-    GenericPanel,
-  },
-  setup () {
-    definePageMeta({
-      layout: 'default',
-    });
+@keyframes textSlide {
+  0%, 100% {
+    transform: translateY(0);
+  }
 
-    useHead({
-      title: 'Nuxtwind Daisy 🟢💨🌼',
-      description: 'Nuxtwind Daisy is a starter template for Nuxt.js 3 + Tailwind CSS + Daisy UI with additional installed setup for custom font, icons, animation, and more.',
-      link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      ],
-      meta: [
-        {
-          hid: 'og:image',
-          name: 'og:image',
-          property: 'og:image',
-          content: ogBanner,
-        },
-      ],
-    });
-
-    return {};
-  },
-};
-</script>
+  16.66%, 33.33%, 50%, 66.66%, 83.33% {
+    transform: translateY(-80%);
+  }
+}
+</style>

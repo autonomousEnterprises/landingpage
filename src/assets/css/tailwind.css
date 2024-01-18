@@ -5,13 +5,9 @@
 @tailwind utilities;
 
 body {
-  background-color: white;
+  background-color: black;
   font-family: 'Inter', sans-serif;
   @apply text-gray-900;
-}
-
-.btn {
-  @apply normal-case;
 }
 
 .title-hero {

@@ -6,12 +6,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // eslint-disable-next-line no-undef
 export default defineNuxtConfig({
-  preset: 'node-server',
+  ssr: false,
 
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
     'nuxt-gtag',
+    '@vueuse/nuxt',
   ],
 
   gtag: {
