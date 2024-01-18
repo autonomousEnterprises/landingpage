@@ -239,7 +239,7 @@ onMounted(() => {
             class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
             data-aos="fade-down" data-aos-delay="100"
           >
-            <img src="./assets/img/api.svg" alt="" />
+            <!-- <img src="./assets/img/api.svg" alt="" /> -->
             <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
               Effortless Automation
             </h3>
@@ -251,7 +251,7 @@ onMounted(() => {
             class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
             data-aos="fade-down" data-aos-delay="200"
           >
-            <img src="./assets/img/cloud.svg" alt="" />
+            <!-- <img src="./assets/img/cloud.svg" alt="" /> -->
             <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
               Adaptable Growth
             </h3>
@@ -263,7 +263,7 @@ onMounted(() => {
             class="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3"
             data-aos="fade-down" data-aos-delay="300"
           >
-            <img src="./assets/img/database.svg" alt="" />
+            <!-- <img src="./assets/img/database.svg" alt="" /> -->
             <h3 class="pt-3 text-xl font-bold text-white sm:pt-6 font-rubik">
               Optimized Resource Management
             </h3>
