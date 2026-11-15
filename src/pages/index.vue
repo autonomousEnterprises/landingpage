@@ -90,7 +90,13 @@ onMounted(() => {
               class="text-base sm:text-lg leading-relaxed text-gray-300 font-inter pt-6 max-w-xl"
               data-aos="fade-up"
             >
-              Stop prompting LLMs for crowded retail indicators. <strong>NujinAI</strong> gives AI coding agents a mathematical discovery microscope: uncovering verifiable market anomalies, executing 5-era invariance tests, and surviving adversarial 8-Gate cynic audits.
+              Stop prompting LLMs for crowded retail indicators. <strong>NujinAI</strong> uncovers market inefficiencies, develops trading strategies, rigorously battle-tests them, deploys your trading bots, and tracks real performance.
+            </p>
+            <p
+              class="text-sm sm:text-base italic text-emerald-400 font-inter pt-3 max-w-xl"
+              data-aos="fade-up"
+            >
+              A true trading framework from A to Z.
             </p>
 
             <div
@@ -212,7 +218,7 @@ onMounted(() => {
 
             <div class="relative pt-8 text-base sm:text-lg text-gray-300 leading-relaxed space-y-4">
               <p>
-                "Wealth should be a fundamental human right, not an institutional privilege. In an AI era where traditional wage structures are dissolving, financial markets cannot remain walled off."
+                "Wealth should be a fundamental human right, not an institutional privilege. In an AI era and a K-shaped economy, finance should be accessible to everyone."
               </p>
               <p class="text-sm text-gray-400">
                 Retail participants do not fail because financial markets are impossible—they fail because they lack institutional tooling, discipline, and adversarial validation. <strong>NujinAI</strong> replaces guesswork with a reproducible, standardized mathematical process.
@@ -222,7 +228,7 @@ onMounted(() => {
 
           <div class="w-full md:w-1/2" data-aos="zoom-in">
             <div class="p-8 rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 space-y-6">
-              <div class="text-xs font-mono uppercase tracking-wider text-emerald-400">Our Core Principles</div>
+              <div class="text-xs font-mono uppercase tracking-wider text-emerald-400">Core Principles</div>
               
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 font-bold">1</div>
@@ -235,8 +241,8 @@ onMounted(() => {
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 font-bold">2</div>
                 <div>
-                  <h4 class="font-bold text-white text-base">100% CPU Native ML</h4>
-                  <p class="text-xs sm:text-sm text-gray-400 pt-1">Surrogate trees and plateau scans engineered to run instantly on any machine or cloud node without GPU clusters.</p>
+                  <h4 class="font-bold text-white text-base">Capital Protection</h4>
+                  <p class="text-xs sm:text-sm text-gray-400 pt-1">Our system enforces strict discipline—preventing overtrading, sizing positions safely, and applying institutional-grade risk management.</p>
                 </div>
               </div>
 
@@ -259,10 +265,10 @@ onMounted(() => {
           >
             <div class="text-2xl mb-3">📐</div>
             <h3 class="text-xl font-bold text-white font-rubik">
-              Zero Indicator Bias
+              Describe Your Goal, Not Code
             </h3>
             <p class="pt-3 text-sm leading-relaxed text-gray-400">
-              State your objectives in human language (scalping, prop-firm rules, swing). The engine translates them into strict mathematical envelopes without biased heuristics.
+              Tell NujinAI what you want in plain English—like scalping, swing trading, or passing prop-firm rules. The system handles the math and builds the strategy for you.
             </p>
           </div>
 
@@ -272,10 +278,10 @@ onMounted(() => {
           >
             <div class="text-2xl mb-3">🔬</div>
             <h3 class="text-xl font-bold text-white font-rubik">
-              Sub-Era Invariance
+              Built to Survive Any Market
             </h3>
             <p class="pt-3 text-sm leading-relaxed text-gray-400">
-              Requires every pattern to prove its statistical consistency across 5 chronological market slices before passing—eliminating transient, regime-dependent noise.
+              Strategies aren't just tested on one lucky year. Every idea must prove it works across different market cycles—bull, bear, and sideways—so it doesn't break when conditions change.
             </p>
           </div>
 
@@ -285,10 +291,10 @@ onMounted(() => {
           >
             <div class="text-2xl mb-3">🛡️</div>
             <h3 class="text-xl font-bold text-white font-rubik">
-              Realistic Microstructure
+              Real-World Costs Included
             </h3>
             <p class="pt-3 text-sm leading-relaxed text-gray-400">
-              Authentically models spreads, commissions, tick slippage, and swap penalties. If an edge cannot clear realistic market friction, it never reaches production.
+              Most backtests lie by ignoring trading fees. NujinAI factors in real spreads, commissions, and slippage from day one—if a strategy can't profit after fees, it gets rejected.
             </p>
           </div>
         </div>
@@ -311,41 +317,56 @@ onMounted(() => {
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
           <div class="p-5 rounded-xl bg-gray-900/80 border border-gray-800 relative group hover:border-emerald-500/50 transition" data-aos="fade-up" data-aos-delay="100">
             <div class="text-xs font-mono text-emerald-400 font-bold mb-2">PHASE 01</div>
-            <h4 class="font-bold text-white text-base mb-2">Mandate Envelope</h4>
+            <h4 class="font-bold text-white text-base mb-2">Set Your Rules</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              Maps your risk limits, prop-firm rules, and holding horizons to strict mathematical envelopes.
+              Define your risk limits, prop-firm rules, and trading style. NujinAI locks them in as hard guardrails.
+            </p>
+            <p class="text-[11px] font-medium text-emerald-400/90 pt-3">
+              ✓ Never violates your risk limits
             </p>
           </div>
 
           <div class="p-5 rounded-xl bg-gray-900/80 border border-gray-800 relative group hover:border-emerald-500/50 transition" data-aos="fade-up" data-aos-delay="200">
             <div class="text-xs font-mono text-emerald-400 font-bold mb-2">PHASE 02</div>
-            <h4 class="font-bold text-white text-base mb-2">Authentic Ingestion</h4>
+            <h4 class="font-bold text-white text-base mb-2">Lock Unseen Data</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              Loads tick/bar history and locks the final 33.3% as uncompromised, unseen Blind Out-of-Sample.
+              Loads historical market data and seals off the final third as an unseen Blind Out-of-Sample test.
+            </p>
+            <p class="text-[11px] font-medium text-emerald-400/90 pt-3">
+              ✓ Zero curve-fitting or hindsight bias
             </p>
           </div>
 
           <div class="p-5 rounded-xl bg-gray-900/80 border border-gray-800 relative group hover:border-emerald-500/50 transition" data-aos="fade-up" data-aos-delay="300">
             <div class="text-xs font-mono text-emerald-400 font-bold mb-2">PHASE 03</div>
-            <h4 class="font-bold text-white text-base mb-2">Discovery & Scan</h4>
+            <h4 class="font-bold text-white text-base mb-2">Find Real Edges</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              130 multi-scale coordinates scanned through shallow surrogate trees and 5-era invariance tests.
+              Scans 130+ market features with machine learning to uncover repeatable inefficiencies across market eras.
+            </p>
+            <p class="text-[11px] font-medium text-emerald-400/90 pt-3">
+              ✓ Proven to work in bull, bear &amp; sideways markets
             </p>
           </div>
 
           <div class="p-5 rounded-xl bg-gray-900/80 border border-gray-800 relative group hover:border-emerald-500/50 transition" data-aos="fade-up" data-aos-delay="400">
             <div class="text-xs font-mono text-emerald-400 font-bold mb-2">PHASE 04</div>
-            <h4 class="font-bold text-white text-base mb-2">Strategy Synthesis</h4>
+            <h4 class="font-bold text-white text-base mb-2">Build the Strategy</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              Synthesizes validated anomalies into clean code with &le; 3 parameters and dynamic 1R sizing.
+              Turns validated patterns into clean, executable strategy code with minimal parameters and built-in sizing.
+            </p>
+            <p class="text-[11px] font-medium text-emerald-400/90 pt-3">
+              ✓ Simple, transparent, and ready to run
             </p>
           </div>
 
           <div class="p-5 rounded-xl bg-gray-900/80 border border-gray-800 relative group hover:border-emerald-500/50 transition" data-aos="fade-up" data-aos-delay="500">
             <div class="text-xs font-mono text-emerald-400 font-bold mb-2">PHASE 05</div>
-            <h4 class="font-bold text-white text-base mb-2">8-Gate Cynic Audit</h4>
+            <h4 class="font-bold text-white text-base mb-2">8-Gate Stress Test</h4>
             <p class="text-xs text-gray-400 leading-relaxed">
-              Adversarial gauntlet testing DSR, Monte Carlo ruin probability, friction, and equity linearity.
+              Runs an institutional audit—Monte Carlo simulations, real trading fees, and drawdown checks—before launch.
+            </p>
+            <p class="text-[11px] font-medium text-emerald-400/90 pt-3">
+              ✓ Only battle-tested bots go live
             </p>
           </div>
         </div>
