@@ -493,6 +493,108 @@ onMounted(() => {
       </div>
     </section>
 
+    <!-- Product Roadmap Section -->
+    <section id="roadmap" class="py-24 border-t border-gray-900/80 bg-gradient-to-b from-black via-gray-950 to-black">
+      <div class="px-6 sm:px-14 lg:px-24 xl:px-40">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Ecosystem Roadmap</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white font-rubik mt-2">
+            The NujinAI Horizon
+          </h2>
+          <p class="text-gray-400 pt-4 text-sm sm:text-base">
+            Starting with universal agent skills, evolving into dedicated quant agents, desktop control centers, native OS environments, and handheld hardware.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4" data-aos="fade-up">
+          <!-- Item 1: nujinSkill -->
+          <div class="p-6 rounded-2xl bg-gradient-to-b from-gray-900/90 to-gray-950 border-2 border-emerald-500/60 shadow-lg shadow-emerald-950/30 relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">⚡</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">Available Now</span>
+              </div>
+              <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinSkill</h3>
+              <p class="text-xs text-gray-400 pt-2 leading-relaxed">
+                Universal AI agent skill for Antigravity, Claude Code, Cursor, and Windsurf. 100% CPU-native quantitative anomaly discovery & 8-Gate audit.
+              </p>
+            </div>
+            <div class="pt-6">
+              <span class="text-xs font-mono text-emerald-400">Open Source • v1.0</span>
+            </div>
+          </div>
+
+          <!-- Item 2: nujinAgent -->
+          <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">🤖</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20">In Development</span>
+              </div>
+              <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinAgent</h3>
+              <p class="text-xs text-gray-400 pt-2 leading-relaxed">
+                Autonomous quantitative execution agent. Runs continuous live market telemetry, automated portfolio rebalancing, and self-auditing supervision.
+              </p>
+            </div>
+            <div class="pt-6">
+              <span class="text-xs font-mono text-gray-500">Autonomous Worker</span>
+            </div>
+          </div>
+
+          <!-- Item 3: nujinDesktop -->
+          <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">🖥️</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">In Development</span>
+              </div>
+              <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinDesktop</h3>
+              <p class="text-xs text-gray-400 pt-2 leading-relaxed">
+                Native institutional cockpit application. Multi-broker execution terminals, real-time strategy visualizer, Monte Carlo stress testing suite.
+              </p>
+            </div>
+            <div class="pt-6">
+              <span class="text-xs font-mono text-gray-500">macOS • Linux • Windows</span>
+            </div>
+          </div>
+
+          <!-- Item 4: nujinOS -->
+          <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">💾</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Roadmap</span>
+              </div>
+              <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinOS</h3>
+              <p class="text-xs text-gray-400 pt-2 leading-relaxed">
+                Specialized Linux distribution fine-tuned for deterministic, low-latency agent orchestration, local LLM serving, and isolated sandboxed execution.
+              </p>
+            </div>
+            <div class="pt-6">
+              <span class="text-xs font-mono text-gray-500">Hardened Linux Distro</span>
+            </div>
+          </div>
+
+          <!-- Item 5: nujinPhone -->
+          <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">📱</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-300 border border-pink-500/20">Concept</span>
+              </div>
+              <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinPhone</h3>
+              <p class="text-xs text-gray-400 pt-2 leading-relaxed">
+                Dedicated portable hardware running local secure quant models, real-time anomaly alerts, and hardware-secured private execution keys.
+              </p>
+            </div>
+            <div class="pt-6">
+              <span class="text-xs font-mono text-gray-500">Hardware Terminal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section id="community" class="py-24 border-t border-gray-900/80 bg-gradient-to-b from-gray-950 to-black">
       <div class="px-6 sm:px-14 lg:px-24 xl:px-40">
