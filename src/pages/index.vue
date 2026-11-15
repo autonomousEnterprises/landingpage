@@ -531,12 +531,30 @@ onMounted(() => {
                 </span>
                 <span class="text-2xl">📥</span>
               </div>
-              <h3 class="text-xl font-bold text-white font-rubik mb-2">Clone the Skill</h3>
+              <h3 class="text-xl font-bold text-white font-rubik mb-2">Get the Skill</h3>
               <p class="text-sm text-gray-400 leading-relaxed">
-                Download or clone the repository to your machine in seconds:
+                Download the ZIP archive or clone the repository directly:
               </p>
-              <div class="mt-4 p-3 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-xs text-emerald-400 overflow-x-auto">
-                git clone https://github.com/nujinAI/nujinSkills.git
+
+              <!-- Download Button -->
+              <div class="mt-4">
+                <a
+                  href="https://github.com/nujinAI/nujinSkills/archive/refs/heads/main.zip"
+                  class="w-full py-2.5 px-4 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500 text-emerald-300 font-medium text-xs flex items-center justify-center space-x-2 transition"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Download ZIP (.zip)</span>
+                </a>
+              </div>
+
+              <!-- Or Git Clone -->
+              <div class="mt-3">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1.5">or clone via git</div>
+                <div class="p-2.5 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-[11px] text-emerald-400 overflow-x-auto select-all">
+                  git clone https://github.com/nujinAI/nujinSkills.git
+                </div>
               </div>
             </div>
             <div class="pt-6 text-xs text-gray-500 font-mono">
