@@ -49,7 +49,7 @@ onMounted(() => {
         <!-- Logo and Brand above Hero -->
         <div class="flex items-center space-x-3 mb-8" data-aos="fade-down">
           <img src="~/assets/logo.png" alt="NujinAI Logo" class="w-9 h-9 object-contain" />
-          <span class="text-2xl font-bold tracking-tight text-white font-rubik bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400">
+          <span class="text-2xl font-bold tracking-tight text-white font-rubik bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 animate-gradient-text">
             NujinAI
           </span>
         </div>
@@ -66,7 +66,7 @@ onMounted(() => {
               data-aos="fade-left"
             >
               Turn AI Agents into <br class="hidden sm:inline" />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 animate-gradient-text">
                 Quantitative Trading Engines
               </span>
             </h1>
@@ -85,7 +85,7 @@ onMounted(() => {
               <a
                 href="https://www.linkedin.com/company/nujinai/"
                 target="_blank"
-                class="px-8 py-4 font-bold text-white bg-gradient-to-r from-secondary to-primary hover:opacity-95 rounded-xl whitespace-nowrap shadow-lg shadow-emerald-950 inline-flex items-center justify-center space-x-3 transition transform hover:-translate-y-0.5"
+                class="px-8 py-4 font-bold text-white bg-gradient-to-r from-fuchsia-500 via-pink-500 to-purple-600 animate-gradient-btn hover:opacity-95 rounded-xl whitespace-nowrap inline-flex items-center justify-center space-x-3 transition transform hover:-translate-y-0.5"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M17.04 17.043h-2.962v-4.64c0-1.107-.023-2.531-1.544-2.531c-1.544 0-1.78 1.204-1.78 2.449v4.722H7.793V7.5h2.844v1.3h.039c.397-.75 1.364-1.54 2.808-1.54c3.001 0 3.556 1.974 3.556 4.545zM4.447 6.194c-.954 0-1.72-.771-1.72-1.72s.767-1.72 1.72-1.72a1.72 1.72 0 0 1 0 3.44m1.484 10.85h-2.97V7.5h2.97zM18.522 0H1.476C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.476 20h17.042c.815 0 1.482-.644 1.482-1.44V1.44C20 .646 19.333 0 18.518 0z"/>
@@ -164,7 +164,7 @@ onMounted(() => {
             class="antialiased text-3xl sm:text-5xl font-bold tracking-tight text-center text-white font-rubik"
             data-aos="fade-up"
           >
-            Built for <span id="typewriter" class="text-emerald-400 underline decoration-emerald-500/40"></span>
+            Built for <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 animate-gradient-text underline decoration-emerald-500/40"></span>
           </h2>
         </div>
 
@@ -513,7 +513,7 @@ onMounted(() => {
               <a
                 href="https://www.linkedin.com/company/nujinai/"
                 target="_blank"
-                class="px-8 py-4 font-bold text-white bg-gradient-to-r from-secondary to-primary hover:opacity-90 rounded-xl whitespace-nowrap shadow-lg shadow-emerald-950 transition inline-flex items-center justify-center space-x-3 text-base"
+                class="px-8 py-4 font-bold text-white bg-gradient-to-r from-fuchsia-500 via-pink-500 to-purple-600 animate-gradient-btn hover:opacity-90 rounded-xl whitespace-nowrap transition inline-flex items-center justify-center space-x-3 text-base"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M17.04 17.043h-2.962v-4.64c0-1.107-.023-2.531-1.544-2.531c-1.544 0-1.78 1.204-1.78 2.449v4.722H7.793V7.5h2.844v1.3h.039c.397-.75 1.364-1.54 2.808-1.54c3.001 0 3.556 1.974 3.556 4.545zM4.447 6.194c-.954 0-1.72-.771-1.72-1.72s.767-1.72 1.72-1.72a1.72 1.72 0 0 1 0 3.44m1.484 10.85h-2.97V7.5h2.97zM18.522 0H1.476C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.476 20h17.042c.815 0 1.482-.644 1.482-1.44V1.44C20 .646 19.333 0 18.518 0z"/>
