@@ -221,10 +221,10 @@ onMounted(() => {
               </div>
             </div>
 
-            <div class="relative pt-8 text-base sm:text-lg text-gray-300 leading-relaxed space-y-4">
-              <p>
-                "Wealth should be a fundamental human right, not an institutional privilege. In an AI era and a K-shaped economy, finance should be accessible to everyone."
-              </p>
+            <div class="relative pt-8 text-base sm:text-lg text-gray-300 leading-relaxed space-y-5">
+              <blockquote class="relative pl-5 py-3 pr-4 border-l-2 border-emerald-400 bg-emerald-950/20 rounded-r-xl italic text-gray-200">
+                <span class="text-emerald-400/70 font-serif text-2xl leading-none mr-1">&ldquo;</span>Wealth should be a fundamental human right, not a privilege for the few. In an AI era and a K-shaped economy, finance should be accessible to everyone.<span class="text-emerald-400/70 font-serif text-2xl leading-none ml-1">&rdquo;</span>
+              </blockquote>
               <p class="text-sm text-gray-400">
                 Retail participants do not fail because financial markets are impossible—they fail because they lack institutional tooling, discipline, and adversarial validation. <strong>NujinAI</strong> replaces guesswork with a reproducible, standardized mathematical process.
               </p>
