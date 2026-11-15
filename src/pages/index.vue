@@ -111,8 +111,8 @@ onMounted(() => {
 
           <!-- Hero Graphic: Terminal / Architecture Card -->
           <div class="w-full lg:max-w-xl" data-aos="fade-right">
-            <div class="mockup-browser bg-gray-900 border border-gray-800 shadow-2xl rounded-2xl overflow-hidden">
-              <div class="mockup-browser-toolbar bg-gray-950 px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="bg-gray-900 border border-gray-800 shadow-2xl rounded-2xl overflow-hidden">
+              <div class="bg-gray-950 px-4 py-3 flex items-center justify-between border-b border-gray-800">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                   <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
@@ -468,9 +468,15 @@ onMounted(() => {
 
           <!-- Code Mockup -->
           <div class="w-full md:w-1/2" data-aos="zoom-in">
-            <div class="mockup-browser bg-base-300 border border-gray-800">
-              <div class="mockup-browser-toolbar bg-gray-950 px-4 py-3">
-                <div class="input text-xs font-mono text-gray-400">https://github.com/autonomousEnterprises/nujinSkills</div>
+            <div class="bg-gray-900 border border-gray-800 shadow-2xl rounded-2xl overflow-hidden">
+              <div class="bg-gray-950 px-4 py-3 flex items-center justify-between border-b border-gray-800">
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                </div>
+                <div class="text-xs font-mono text-gray-400">nujinSkills/agent-workflow.md</div>
+                <div class="text-xs font-mono text-emerald-400">v1.0</div>
               </div>
               <div class="p-6 bg-black font-mono text-xs sm:text-sm text-gray-300 leading-relaxed space-y-2">
                 <div class="text-emerald-400 font-bold"># Natural Language Example:</div>
