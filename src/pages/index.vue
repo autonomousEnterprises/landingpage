@@ -43,8 +43,23 @@ onMounted(() => {
 
 <template>
   <div class="bg-black/75 backdrop-blur-xl w-full min-h-screen text-gray-300 font-inter">
+    <!-- Top Caution / Disclaimer Banner -->
+    <div class="w-full bg-red-950/25 border-b border-red-900/40 px-6 py-3 sm:px-14 xl:px-36">
+      <div class="flex items-start sm:items-center space-x-3 text-xs leading-relaxed text-gray-300">
+        <span class="inline-flex items-center space-x-1.5 text-red-400 font-semibold uppercase tracking-wider flex-shrink-0">
+          <svg class="w-4 h-4 fill-current inline" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <span>Caution</span>
+        </span>
+        <span class="text-gray-400">
+          This project is in an early stage and is provided for <strong class="text-gray-200">educational and research purposes only</strong>. Nothing herein constitutes financial or investment advice. Participating in financial markets carries substantial risk of loss—never trade or risk more capital than you are willing to lose.
+        </span>
+      </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="pt-12 sm:pt-16 pb-16">
+    <section class="pt-8 sm:pt-12 pb-16">
       <div class="w-full px-6 sm:px-14 xl:px-36">
         <!-- Logo and Brand above Hero -->
         <div class="flex items-center space-x-3 mb-8" data-aos="fade-down">
