@@ -37,6 +37,16 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: 'NujinAI — Universal Quantitative Trading Engine as an Agent Skill',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Empower autonomous AI agents to discover market anomalies, engineer battle-tested strategies, and deploy reliable trading bots — 100% on CPU.'
+        }
+      ],
       link: [
         {
           rel: 'stylesheet',
