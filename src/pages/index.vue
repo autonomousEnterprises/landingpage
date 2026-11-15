@@ -193,14 +193,20 @@ onMounted(() => {
               />
               <div class="pl-6">
                 <div class="flex flex-wrap items-baseline text-base text-gray-200 sm:text-lg">
-                  <a class="font-bold text-white" href="https://linkedin.com/in/christonomous" target="_blank">Christopher Müller</a>
+                  <a class="font-bold text-white hover:text-emerald-400 transition" href="https://chris.nujin.ai/" target="_blank">Christopher Müller</a>
                   <span class="pl-2 font-light text-emerald-400 text-sm">
                     Founder & Quant Architect
                   </span>
                 </div>
-                <a class="text-xs text-gray-400 hover:text-emerald-400 transition" href="https://linkedin.com/in/christonomous" target="_blank">
-                  Connect on LinkedIn &rarr;
-                </a>
+                <div class="flex items-center space-x-3 pt-1 text-xs">
+                  <a class="text-emerald-400 hover:text-emerald-300 font-mono transition" href="https://chris.nujin.ai/" target="_blank">
+                    chris.nujin.ai &rarr;
+                  </a>
+                  <span class="text-gray-600">•</span>
+                  <a class="text-gray-400 hover:text-emerald-400 transition" href="https://linkedin.com/in/christonomous" target="_blank">
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
 
