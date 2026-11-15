@@ -762,7 +762,7 @@ onMounted(() => {
               Follow NujinAI on LinkedIn
             </h2>
             <p class="text-gray-300 text-base sm:text-lg pt-4 leading-relaxed">
-              NujinAI is 100% open-source and free—no paywalls, no courses, no upsells. This is pure conviction to make financial freedom accessible and build a better world. Please show some love and support!
+              NujinAI is 100% open-source and free—no paywalls, no courses, no upsells. This is pure conviction to make financial freedom accessible and build a better world. Please show some love and support—contributions are always welcome!
             </p>
             <p class="text-xs text-gray-500 pt-2 font-mono">
               Open Source • Community Driven • 100% Free
@@ -784,7 +784,7 @@ onMounted(() => {
                 target="_blank"
                 class="px-6 py-4 font-semibold text-gray-300 hover:text-white border border-gray-700 bg-gray-900/60 rounded-xl whitespace-nowrap inline-flex items-center justify-center space-x-2 transition"
               >
-                <span>Explore GitHub Repository &rarr;</span>
+                <span>Star GitHub Repository &rarr;</span>
               </a>
             </div>
           </div>
