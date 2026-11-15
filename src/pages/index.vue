@@ -108,7 +108,7 @@ onMounted(() => {
                 <span>Follow NujinAI on LinkedIn</span>
               </a>
               <a
-                href="https://github.com/autonomousEnterprises/nujinSkills"
+                href="https://github.com/nujinAI/nujinSkills"
                 target="_blank"
                 class="px-6 py-4 font-semibold text-gray-300 hover:text-white border border-gray-800 hover:border-gray-700 bg-gray-900/60 rounded-xl whitespace-nowrap inline-flex items-center justify-center space-x-2 transition"
               >
@@ -120,7 +120,7 @@ onMounted(() => {
             <!-- Terminal Badge / Quick command -->
             <div class="mt-6 flex items-center space-x-3 text-xs text-gray-400 font-mono bg-black/60 px-4 py-2.5 rounded-lg border border-gray-800" data-aos="fade-up">
               <span class="text-emerald-400">$</span>
-              <span>git clone https://github.com/autonomousEnterprises/nujinSkills.git</span>
+              <span>git clone https://github.com/nujinAI/nujinSkills.git</span>
             </div>
           </div>
 
@@ -638,7 +638,7 @@ onMounted(() => {
                 <span>Follow NujinAI on LinkedIn</span>
               </a>
               <a
-                href="https://github.com/autonomousEnterprises/nujinSkills"
+                href="https://github.com/nujinAI/nujinSkills"
                 target="_blank"
                 class="px-6 py-4 font-semibold text-gray-300 hover:text-white border border-gray-700 bg-gray-900/60 rounded-xl whitespace-nowrap inline-flex items-center justify-center space-x-2 transition"
               >
