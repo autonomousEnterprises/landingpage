@@ -508,6 +508,92 @@ onMounted(() => {
       </div>
     </section>
 
+    <!-- How to Use Section -->
+    <section id="how-to-use" class="py-24 border-t border-gray-900/80 bg-gradient-to-b from-gray-950 via-black to-gray-950">
+      <div class="px-6 sm:px-14 lg:px-24 xl:px-40">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Zero Quant Knowledge Needed</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white font-rubik mt-2">
+            How It Works in 3 Simple Steps
+          </h2>
+          <p class="text-gray-400 pt-4 text-base leading-relaxed">
+            You don't need to write mathematical formulas or run terminal scripts. Your AI coding agent knows the full framework through <code class="text-emerald-400 font-mono">SKILL.md</code> and handles everything from discovery to deployment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
+          <!-- Step 1 -->
+          <div class="p-8 rounded-2xl bg-gradient-to-b from-gray-900/80 to-black border border-gray-800 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 font-mono font-bold flex items-center justify-center text-sm">
+                  01
+                </span>
+                <span class="text-2xl">📥</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-rubik mb-2">Clone the Skill</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Download or clone the repository to your machine in seconds:
+              </p>
+              <div class="mt-4 p-3 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-xs text-emerald-400 overflow-x-auto">
+                git clone https://github.com/nujinAI/nujinSkills.git
+              </div>
+            </div>
+            <div class="pt-6 text-xs text-gray-500 font-mono">
+              Ready in 5 seconds
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="p-8 rounded-2xl bg-gradient-to-b from-gray-900/80 to-black border border-gray-800 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 font-mono font-bold flex items-center justify-center text-sm">
+                  02
+                </span>
+                <span class="text-2xl">⚡</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-rubik mb-2">Open Your AI Agent</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Launch your preferred AI assistant in that folder:
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Antigravity</span>
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Claude Code</span>
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Cursor</span>
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Windsurf</span>
+              </div>
+            </div>
+            <div class="pt-6 text-xs text-gray-500 font-mono">
+              Reads SKILL.md automatically
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="p-8 rounded-2xl bg-gradient-to-b from-gray-900/80 to-black border border-gray-800 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 font-mono font-bold flex items-center justify-center text-sm">
+                  03
+                </span>
+                <span class="text-2xl">💬</span>
+              </div>
+              <h3 class="text-xl font-bold text-white font-rubik mb-2">Speak Naturally</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Just state your trading goals in plain English:
+              </p>
+              <div class="mt-4 p-3 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-xs text-teal-300 italic">
+                "Build me a prop-firm day trading strategy for Gold with MDD &lt; 2.5%"
+              </div>
+            </div>
+            <div class="pt-6 text-xs text-gray-500 font-mono">
+              Agent handles research & execution
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Product Roadmap Section -->
     <section id="roadmap" class="py-24 border-t border-gray-900/80 bg-gradient-to-b from-black via-gray-950 to-black">
       <div class="px-6 sm:px-14 lg:px-24 xl:px-40">
