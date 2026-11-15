@@ -765,7 +765,7 @@ onMounted(() => {
               NujinAI is 100% open-source and free—no paywalls, no courses, no upsells. This is pure conviction to make financial freedom accessible and build a better world. Please show some love and support!
             </p>
             <p class="text-xs text-gray-500 pt-2 font-mono">
-              Open Source • Community Driven • 100% CPU Native
+              Open Source • Community Driven • 100% Free
             </p>
 
             <div class="pt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
