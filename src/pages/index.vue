@@ -123,10 +123,15 @@ onMounted(() => {
               </a>
             </div>
 
-            <!-- Terminal Badge / Quick command -->
-            <div class="mt-6 flex items-center space-x-3 text-xs text-gray-400 font-mono bg-black/60 px-4 py-2.5 rounded-lg border border-gray-800" data-aos="fade-up">
-              <span class="text-emerald-400">$</span>
-              <span>git clone https://github.com/nujinAI/nujinSkills.git</span>
+            <!-- Get Started Link -->
+            <div class="mt-6" data-aos="fade-up">
+              <a
+                href="#how-to-use"
+                class="inline-flex items-center space-x-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 border-b border-emerald-500/40 hover:border-emerald-300 pb-0.5 transition"
+              >
+                <span>Get started — see how it works</span>
+                <span>&rarr;</span>
+              </a>
             </div>
           </div>
 
