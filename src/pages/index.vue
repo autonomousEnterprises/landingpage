@@ -90,7 +90,7 @@ onMounted(() => {
               class="text-base sm:text-lg leading-relaxed text-gray-300 font-inter pt-6 max-w-xl"
               data-aos="fade-up"
             >
-              Stop prompting LLMs for crowded retail indicators. <strong>NujinAI</strong> uncovers market inefficiencies, develops trading strategies, rigorously battle-tests them, deploys your trading bots, and tracks real performance.
+              Stop falling into retail traps. <strong>NujinAI</strong> uncovers market inefficiencies, develops trading strategies, rigorously battle-tests them, deploys your trading bots, and tracks real performance.
             </p>
             <p
               class="text-sm sm:text-base italic text-emerald-400 font-inter pt-3 max-w-xl"
