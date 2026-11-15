@@ -73,7 +73,7 @@ onMounted(() => {
           <div class="flex flex-col max-w-2xl text-left sm:items-center sm:text-center lg:text-left lg:items-start">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-400 text-xs font-mono mb-6" data-aos="fade-down">
               <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Open Source AI Quant Skill • 100% CPU Native
+              Open Source AI Quant Skill • 100% Free
             </div>
 
             <h1
