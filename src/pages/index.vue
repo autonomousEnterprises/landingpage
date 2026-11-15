@@ -44,8 +44,16 @@ onMounted(() => {
 <template>
   <div class="bg-black/75 backdrop-blur-xl w-full min-h-screen text-gray-300 font-inter">
     <!-- Hero Section -->
-    <section class="pt-8 md:pt-20">
-      <div class="w-full px-6 py-20 sm:px-14 xl:px-36">
+    <section class="pt-12 sm:pt-16 pb-16">
+      <div class="w-full px-6 sm:px-14 xl:px-36">
+        <!-- Logo and Brand above Hero -->
+        <div class="flex items-center space-x-3 mb-8" data-aos="fade-down">
+          <img src="~/assets/logo.png" alt="NujinAI Logo" class="w-9 h-9 object-contain" />
+          <span class="text-2xl font-bold tracking-tight text-white font-rubik bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400">
+            NujinAI
+          </span>
+        </div>
+
         <div class="flex flex-col items-center lg:flex-row lg:items-center lg:justify-between gap-12">
           <div class="flex flex-col max-w-2xl text-left sm:items-center sm:text-center lg:text-left lg:items-start">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-400 text-xs font-mono mb-6" data-aos="fade-down">
