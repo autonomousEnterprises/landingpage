@@ -370,6 +370,12 @@ onMounted(() => {
             </p>
           </div>
         </div>
+
+        <div class="mt-8 text-center" data-aos="fade-up">
+          <p class="inline-block px-5 py-2.5 rounded-full bg-emerald-950/50 border border-emerald-500/30 text-xs sm:text-sm text-emerald-300 font-inter">
+            💡 <span class="font-semibold text-white">Risk-Free Paper Trading:</span> Let your bots run live in paper trade mode first—zero real money at risk until you feel completely comfortable.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -751,7 +757,7 @@ onMounted(() => {
               Follow NujinAI on LinkedIn
             </h2>
             <p class="text-gray-300 text-base sm:text-lg pt-4 leading-relaxed">
-              We share open-source research breakdowns, CPU ML discoveries, benchmark audits, and new agent skills. Follow along as we democratize institutional quantitative engineering.
+              NujinAI is 100% open-source and free—no paywalls, no courses, no upsells. This is pure conviction to make financial freedom accessible and build a better world. Please show some love and support!
             </p>
             <p class="text-xs text-gray-500 pt-2 font-mono">
               Open Source • Community Driven • 100% CPU Native
