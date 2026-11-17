@@ -594,6 +594,10 @@ onMounted(() => {
                   git clone https://github.com/nujinAI/nujinSkills.git
                 </div>
               </div>
+
+              <p class="mt-3 text-[11px] text-gray-400 leading-relaxed">
+                🔄 <span class="text-gray-300 font-medium">Rolling updates multiple times a week.</span> Click <a href="https://github.com/nujinAI/nujinSkills" target="_blank" class="text-emerald-400 hover:underline">Star &amp; Watch on GitHub</a> to stay up to date.
+              </p>
             </div>
             <div class="pt-6 text-xs text-gray-500 font-mono">
               Ready in 5 seconds
