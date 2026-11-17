@@ -647,6 +647,12 @@ onMounted(() => {
             </div>
           </div>
         </div>
+
+        <div class="mt-10 text-center" data-aos="fade-up">
+          <div class="inline-block max-w-3xl px-6 py-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 text-xs sm:text-sm text-gray-300 font-inter leading-relaxed">
+            💡 <span class="font-semibold text-white">Pro Tip — Live Paper Trading in the Background:</span> Ask your AI agent to run your strategy as a live paper-trading bot in the background—and even set it to auto-start after device reboots—so you can track real live results over days without risking real money.
+          </div>
+        </div>
       </div>
     </section>
 
