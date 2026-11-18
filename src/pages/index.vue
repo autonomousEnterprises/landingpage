@@ -566,7 +566,10 @@ onMounted(() => {
             How It Works in 3 Simple Steps
           </h2>
           <p class="text-gray-400 pt-4 text-base leading-relaxed">
-            You don't need to write mathematical formulas or run terminal scripts. Your AI Agent knows the full framework and handles everything from discovery to deployment. You have two options to use NujinAI: install the skill into your existing agent, or use our dedicated NujinAgent.
+            You don't need to write mathematical formulas. Your AI Agent knows the full framework and handles everything from discovery to deployment. You have two options to use NujinAI: install the skill into your existing agent, or use our dedicated NujinAgent.
+          </p>
+          <p class="mt-3 text-xs text-gray-400">
+            🔄 <span class="text-gray-300 font-medium">Rolling updates multiple times a week.</span> Click <a href="https://github.com/nujinAI/nujinSkills" target="_blank" class="text-emerald-400 hover:underline">Star &amp; Watch on GitHub</a> to stay up to date.
           </p>
         </div>
 
@@ -619,10 +622,6 @@ onMounted(() => {
                   <span>No terminal? Download ZIP &amp; open the folder in your AI agent</span>
                 </a>
               </div>
-
-              <p class="mt-3 text-[11px] text-gray-400 leading-relaxed">
-                🔄 <span class="text-gray-300 font-medium">Rolling updates multiple times a week.</span> Click <a href="https://github.com/nujinAI/nujinSkills" target="_blank" class="text-emerald-400 hover:underline">Star &amp; Watch on GitHub</a> to stay up to date.
-              </p>
             </div>
             <div class="pt-6 text-xs text-gray-500 font-mono">
               Ready in 5 seconds
@@ -803,7 +802,7 @@ onMounted(() => {
               </p>
             </div>
             <div class="pt-6 flex items-center justify-between">
-              <span class="text-xs font-mono text-emerald-400">Open Source • v1.0</span>
+              <span class="text-xs font-mono text-emerald-400">Agent Skill</span>
               <span class="text-xs font-mono text-emerald-400">GitHub →</span>
             </div>
           </a>
