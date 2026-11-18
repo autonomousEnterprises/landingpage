@@ -1,4 +1,15 @@
 <script setup script>
+import { ref } from "vue";
+
+const copiedCmd = ref(null);
+function copyCommand(cmd) {
+  navigator.clipboard?.writeText(cmd);
+  copiedCmd.value = cmd;
+  setTimeout(() => {
+    if (copiedCmd.value === cmd) copiedCmd.value = null;
+  }, 1800);
+}
+
 const typewriterPhrases = [
   "Quantitative Researchers",
   "AI Coding Agents",
@@ -576,22 +587,36 @@ onMounted(() => {
 
               <!-- Primary: npx skills add -->
               <div class="mt-4">
-                <div class="p-3 bg-black/90 rounded-xl border border-emerald-500/40 font-mono text-xs text-emerald-400 overflow-x-auto select-all">
-                  npx skills add nujinAI/nujinSkills
-                </div>
+                <button
+                  type="button"
+                  @click="copyCommand('npx skills add nujinAI/nujinSkills')"
+                  class="w-full p-3 bg-black/90 rounded-xl border border-emerald-500/40 hover:border-emerald-400 font-mono text-xs text-emerald-400 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+                >
+                  <span class="overflow-x-auto">npx skills add nujinAI/nujinSkills</span>
+                  <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300">
+                    {{ copiedCmd === 'npx skills add nujinAI/nujinSkills' ? 'Copied!' : 'Copy' }}
+                  </span>
+                </button>
               </div>
 
               <!-- Secondary: Git Clone or ZIP -->
               <div class="mt-3">
                 <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1.5">or clone / download manually</div>
-                <div class="p-2.5 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-[11px] text-gray-400 overflow-x-auto select-all">
-                  git clone https://github.com/nujinAI/nujinSkills.git
-                </div>
+                <button
+                  type="button"
+                  @click="copyCommand('git clone https://github.com/nujinAI/nujinSkills.git')"
+                  class="w-full p-2.5 bg-black/90 rounded-xl border border-gray-800/90 hover:border-gray-600 font-mono text-[11px] text-gray-400 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+                >
+                  <span class="overflow-x-auto">git clone https://github.com/nujinAI/nujinSkills.git</span>
+                  <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
+                    {{ copiedCmd === 'git clone https://github.com/nujinAI/nujinSkills.git' ? 'Copied!' : 'Copy' }}
+                  </span>
+                </button>
                 <a
                   href="https://github.com/nujinAI/nujinSkills/archive/refs/heads/main.zip"
                   class="mt-2 inline-flex items-center space-x-1.5 text-[11px] text-gray-400 hover:text-emerald-400 transition"
                 >
-                  <span>Download ZIP (.zip)</span>
+                  <span>No terminal? Download ZIP &amp; open the folder in your AI agent</span>
                 </a>
               </div>
 
