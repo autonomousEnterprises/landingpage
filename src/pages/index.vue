@@ -566,7 +566,7 @@ onMounted(() => {
             How It Works in 3 Simple Steps
           </h2>
           <p class="text-gray-400 pt-4 text-base leading-relaxed">
-            You don't need to write mathematical formulas or run terminal scripts. Your AI coding agent knows the full framework through <code class="text-emerald-400 font-mono">SKILL.md</code> and handles everything from discovery to deployment.
+            You don't need to write mathematical formulas or run terminal scripts. Your AI Agent knows the full framework and handles everything from discovery to deployment. You have two options to use NujinAI: install the skill into your existing agent, or use our dedicated NujinAgent.
           </p>
         </div>
 
@@ -678,6 +678,8 @@ onMounted(() => {
           </div>
         </div>
 
+        <div class="my-10 border-t border-gray-800/80"></div>
+
         <!-- Option 2: Dedicated NujinAgent -->
         <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-gray-900/90 via-black to-gray-900/90 border border-emerald-500/30" data-aos="fade-up">
           <div class="mb-6">
@@ -742,19 +744,22 @@ onMounted(() => {
             <!-- Step 3 -->
             <div class="p-4 rounded-xl bg-black/60 border border-gray-800 space-y-2.5">
               <div class="text-xs font-mono text-emerald-400">03 · Speak Naturally</div>
-              <p class="text-xs text-gray-400 leading-relaxed">
-                Open the <span class="text-gray-200 font-medium">WebUI</span> or run in your <span class="text-gray-200 font-medium">CLI</span>, and state your trading goal in plain English:
-              </p>
-              <button
-                type="button"
-                @click="copyCommand('nujinagent agent')"
-                class="w-full p-2 bg-black/90 rounded-lg border border-gray-800 hover:border-gray-600 font-mono text-[11px] text-gray-300 flex items-center justify-between gap-2 text-left transition cursor-pointer"
-              >
-                <span>nujinagent agent</span>
-                <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
-                  {{ copiedCmd === 'nujinagent agent' ? 'Copied!' : 'Copy' }}
-                </span>
-              </button>
+              <div class="text-[11px] text-gray-400 leading-relaxed">
+                <span class="text-gray-200 font-medium">WebUI:</span> Chat in your browser and state your trading goal in plain English.
+              </div>
+              <div>
+                <div class="text-[11px] text-gray-400 mb-1"><span class="text-gray-200 font-medium">CLI:</span> State your trading goal in plain English via:</div>
+                <button
+                  type="button"
+                  @click="copyCommand('nujinagent agent')"
+                  class="w-full p-2 bg-black/90 rounded-lg border border-gray-800 hover:border-gray-600 font-mono text-[11px] text-gray-300 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+                >
+                  <span>nujinagent agent</span>
+                  <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
+                    {{ copiedCmd === 'nujinagent agent' ? 'Copied!' : 'Copy' }}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
