@@ -678,6 +678,87 @@ onMounted(() => {
           </div>
         </div>
 
+        <!-- Option 2: Dedicated NujinAgent -->
+        <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-gray-900/90 via-black to-gray-900/90 border border-emerald-500/30" data-aos="fade-up">
+          <div class="mb-6">
+            <div class="inline-flex items-center space-x-2 text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">
+              <span>⚡</span>
+              <span>Or use the dedicated agent</span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-rubik mb-1.5">No AI Agent Installed? Use NujinAgent</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Our dedicated AI agent ships with <span class="text-gray-200 font-medium">nujinSkills</span> preinstalled and includes a built-in WebUI.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Step 1 -->
+            <div class="p-4 rounded-xl bg-black/60 border border-gray-800">
+              <div class="text-xs font-mono text-emerald-400 mb-1.5">01 · Install</div>
+              <p class="text-xs text-gray-400 mb-3">Clone and install NujinAgent:</p>
+              <button
+                type="button"
+                @click="copyCommand('git clone https://github.com/nujinAI/nujinAgent.git && cd nujinAgent && pip install -e .')"
+                class="w-full p-2.5 bg-black/90 rounded-lg border border-emerald-500/40 hover:border-emerald-400 font-mono text-[11px] text-emerald-400 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+              >
+                <span class="overflow-x-auto">git clone https://github.com/nujinAI/nujinAgent.git &amp;&amp; cd nujinAgent &amp;&amp; pip install -e .</span>
+                <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300">
+                  {{ copiedCmd === 'git clone https://github.com/nujinAI/nujinAgent.git && cd nujinAgent && pip install -e .' ? 'Copied!' : 'Copy' }}
+                </span>
+              </button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="p-4 rounded-xl bg-black/60 border border-gray-800 space-y-2.5">
+              <div class="text-xs font-mono text-emerald-400">02 · Connect Your AI</div>
+              <div>
+                <div class="text-[11px] text-gray-400 mb-1"><span class="text-gray-200 font-medium">WebUI</span> (start in terminal, then add key in Settings → Providers):</div>
+                <button
+                  type="button"
+                  @click="copyCommand('nujinagent webui')"
+                  class="w-full p-2 bg-black/90 rounded-lg border border-gray-800 hover:border-gray-600 font-mono text-[11px] text-gray-300 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+                >
+                  <span>nujinagent webui</span>
+                  <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
+                    {{ copiedCmd === 'nujinagent webui' ? 'Copied!' : 'Copy' }}
+                  </span>
+                </button>
+              </div>
+              <div>
+                <div class="text-[11px] text-gray-400 mb-1"><span class="text-gray-200 font-medium">CLI</span>:</div>
+                <button
+                  type="button"
+                  @click="copyCommand('nujinagent onboard')"
+                  class="w-full p-2 bg-black/90 rounded-lg border border-gray-800 hover:border-gray-600 font-mono text-[11px] text-gray-300 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+                >
+                  <span>nujinagent onboard</span>
+                  <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
+                    {{ copiedCmd === 'nujinagent onboard' ? 'Copied!' : 'Copy' }}
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="p-4 rounded-xl bg-black/60 border border-gray-800 space-y-2.5">
+              <div class="text-xs font-mono text-emerald-400">03 · Speak Naturally</div>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                Open the <span class="text-gray-200 font-medium">WebUI</span> or run in your <span class="text-gray-200 font-medium">CLI</span>, and state your trading goal in plain English:
+              </p>
+              <button
+                type="button"
+                @click="copyCommand('nujinagent agent')"
+                class="w-full p-2 bg-black/90 rounded-lg border border-gray-800 hover:border-gray-600 font-mono text-[11px] text-gray-300 flex items-center justify-between gap-2 text-left transition cursor-pointer"
+              >
+                <span>nujinagent agent</span>
+                <span class="text-[10px] shrink-0 px-1.5 py-0.5 rounded bg-gray-800 text-gray-300">
+                  {{ copiedCmd === 'nujinagent agent' ? 'Copied!' : 'Copy' }}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div class="mt-10 text-center" data-aos="fade-up">
           <div class="inline-block max-w-3xl px-6 py-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 text-xs sm:text-sm text-gray-300 font-inter leading-relaxed">
             💡 <span class="font-semibold text-white">Pro Tip — Live Paper Trading in the Background:</span> Ask your AI agent to run your strategy as a live paper-trading bot in the background—and even set it to auto-start after device reboots—so you can track real live results over days without risking real money.
