@@ -787,7 +787,11 @@ onMounted(() => {
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4" data-aos="fade-up">
           <!-- Item 1: nujinSkill -->
-          <div class="p-6 rounded-2xl bg-gradient-to-b from-gray-900/90 to-gray-950 border-2 border-emerald-500/60 shadow-lg shadow-emerald-950/30 relative flex flex-col justify-between">
+          <a
+            href="https://github.com/nujinAI/nujinSkills"
+            target="_blank"
+            class="p-6 rounded-2xl bg-gradient-to-b from-gray-900/90 to-gray-950 border-2 border-emerald-500/60 hover:border-emerald-400 shadow-lg shadow-emerald-950/30 relative flex flex-col justify-between transition"
+          >
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-2xl">⚡</span>
@@ -795,30 +799,36 @@ onMounted(() => {
               </div>
               <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinSkill</h3>
               <p class="text-xs text-gray-400 pt-2 leading-relaxed">
-                Universal AI agent skill for Antigravity, Claude Code, Cursor, and Windsurf. 100% CPU-native quantitative anomaly discovery & 8-Gate audit.
+                Universal AI agent skill compatible with any modern AI agent. 100% CPU-native quantitative anomaly discovery, 8-Gate audit, and strategy deployment.
               </p>
             </div>
-            <div class="pt-6">
+            <div class="pt-6 flex items-center justify-between">
               <span class="text-xs font-mono text-emerald-400">Open Source • v1.0</span>
+              <span class="text-xs font-mono text-emerald-400">GitHub →</span>
             </div>
-          </div>
+          </a>
 
           <!-- Item 2: nujinAgent -->
-          <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
+          <a
+            href="https://github.com/nujinAI/nujinAgent"
+            target="_blank"
+            class="p-6 rounded-2xl bg-gradient-to-b from-gray-900/90 to-gray-950 border-2 border-emerald-500/60 hover:border-emerald-400 shadow-lg shadow-emerald-950/30 relative flex flex-col justify-between transition"
+          >
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-2xl">🤖</span>
-                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20">In Development</span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">Available Now</span>
               </div>
               <h3 class="text-lg font-bold text-white font-rubik font-mono">nujinAgent</h3>
               <p class="text-xs text-gray-400 pt-2 leading-relaxed">
-                Autonomous quantitative execution agent. Runs continuous live market telemetry, automated portfolio rebalancing, and self-auditing supervision.
+                Dedicated autonomous AI agent with nujinSkill preinstalled. Available via CLI &amp; WebUI for continuous research, execution, and self-auditing.
               </p>
             </div>
-            <div class="pt-6">
-              <span class="text-xs font-mono text-gray-500">Autonomous Worker</span>
+            <div class="pt-6 flex items-center justify-between">
+              <span class="text-xs font-mono text-emerald-400">CLI &amp; WebUI</span>
+              <span class="text-xs font-mono text-emerald-400">GitHub →</span>
             </div>
-          </div>
+          </a>
 
           <!-- Item 3: nujinDesktop -->
           <div class="p-6 rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-gray-700 transition flex flex-col justify-between">
