@@ -569,30 +569,30 @@ onMounted(() => {
                 </span>
                 <span class="text-2xl">📥</span>
               </div>
-              <h3 class="text-xl font-bold text-white font-rubik mb-2">Get the Skill</h3>
+              <h3 class="text-xl font-bold text-white font-rubik mb-2">Install the Skill</h3>
               <p class="text-sm text-gray-400 leading-relaxed">
-                Download the ZIP archive or clone the repository directly:
+                Install in one command via the universal <span class="text-gray-300 font-medium">Agent Skills</span> standard:
               </p>
 
-              <!-- Download Button -->
+              <!-- Primary: npx skills add -->
               <div class="mt-4">
-                <a
-                  href="https://github.com/nujinAI/nujinSkills/archive/refs/heads/main.zip"
-                  class="w-full py-2.5 px-4 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500 text-emerald-300 font-medium text-xs flex items-center justify-center space-x-2 transition"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                  </svg>
-                  <span>Download ZIP (.zip)</span>
-                </a>
+                <div class="p-3 bg-black/90 rounded-xl border border-emerald-500/40 font-mono text-xs text-emerald-400 overflow-x-auto select-all">
+                  npx skills add nujinAI/nujinSkills
+                </div>
               </div>
 
-              <!-- Or Git Clone -->
+              <!-- Secondary: Git Clone or ZIP -->
               <div class="mt-3">
-                <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1.5">or clone via git</div>
-                <div class="p-2.5 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-[11px] text-emerald-400 overflow-x-auto select-all">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1.5">or clone / download manually</div>
+                <div class="p-2.5 bg-black/90 rounded-xl border border-gray-800/90 font-mono text-[11px] text-gray-400 overflow-x-auto select-all">
                   git clone https://github.com/nujinAI/nujinSkills.git
                 </div>
+                <a
+                  href="https://github.com/nujinAI/nujinSkills/archive/refs/heads/main.zip"
+                  class="mt-2 inline-flex items-center space-x-1.5 text-[11px] text-gray-400 hover:text-emerald-400 transition"
+                >
+                  <span>Download ZIP (.zip)</span>
+                </a>
               </div>
 
               <p class="mt-3 text-[11px] text-gray-400 leading-relaxed">
@@ -615,13 +615,14 @@ onMounted(() => {
               </div>
               <h3 class="text-xl font-bold text-white font-rubik mb-2">Open Your AI Agent</h3>
               <p class="text-sm text-gray-400 leading-relaxed">
-                Launch your preferred AI assistant in that folder:
+                Ask your agent in plain English—it loads <span class="text-gray-300 font-mono">SKILL.md</span> and sets up its Python environment automatically on first run:
               </p>
               <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
                 <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Antigravity</span>
                 <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Claude Code</span>
                 <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Cursor</span>
-                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Windsurf</span>
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">OpenClaw</span>
+                <span class="px-2.5 py-1 rounded-lg bg-gray-900 border border-gray-800 text-gray-300">Hermes</span>
               </div>
             </div>
             <div class="pt-6 text-xs text-gray-500 font-mono">
