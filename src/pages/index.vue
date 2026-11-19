@@ -917,6 +917,14 @@ onMounted(() => {
               >
                 <span>Star GitHub Repository &rarr;</span>
               </a>
+              <a
+                href="https://github.com/christonomous/CodeCapitalFreedom"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-4 font-semibold text-emerald-400 hover:text-emerald-300 border border-emerald-500/40 bg-emerald-950/30 rounded-xl whitespace-nowrap inline-flex items-center justify-center space-x-2 transition"
+              >
+                <span>Read the Book: Code, Capital &amp; Freedom &rarr;</span>
+              </a>
             </div>
           </div>
         </div>
