@@ -917,6 +917,8 @@ onMounted(() => {
               >
                 <span>Star GitHub Repository &rarr;</span>
               </a>
+            </div>
+            <div class="pt-4">
               <a
                 href="https://github.com/christonomous/CodeCapitalFreedom"
                 target="_blank"
